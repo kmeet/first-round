@@ -8,9 +8,9 @@ import java.util.Optional;
 
 public class StringUtil implements QuirkyComparator<String>, QuirkyTwoItemContainerComparator<String> {
 
-    /*
-     * From the QuirkyComparator<T> interface which has a single method "Optional<T> compare(T first, T second) throws RuntimeException;".
-     * The actual implementation of the method can be further enhanced to
+    /**
+     * From the {@link QuirkyComparator} interface which has a single method {@code Optional<T> compare(T first, T second) throws RuntimeException;}.
+     * The actual implementation of the method can be further enhanced.
      * */
     @Override
     public Optional<String> compare(String first, String second) throws RuntimeException {
@@ -20,9 +20,9 @@ public class StringUtil implements QuirkyComparator<String>, QuirkyTwoItemContai
             throw new RuntimeException("Invalid input");
     }
 
-    /*
-     * From the QuirkyTwoItemContainerComparator<T> interface which has a single method "Optional<T> compare(TwoItemContainer<T> twoItemContainer) throws RuntimeException;".
-     * The original StringCompare class from the question must implement TwoItemContainer<T> interface that has getters and setters for T first and T second.
+    /**
+     * From the {@link QuirkyTwoItemContainerComparator} interface which has a single method {@code Optional<T> compare(TwoItemContainer<T> twoItemContainer) throws RuntimeException;}.
+     * The original StringCompare class from the question must implement {@link TwoItemContainer} interface that has getters and setters for T first and T second.
      * */
     @Override
     public Optional<String> compare(TwoItemContainer<String> twoItemContainer) throws RuntimeException {
