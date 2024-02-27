@@ -1,5 +1,7 @@
 package org.mjkulkarni;
 
+import java.util.Optional;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -25,16 +27,20 @@ public class Main {
         }
     }
 
-    class Util {
+    class StringUtil implements QuirkyComparator<String, String, String> {
 
-        public String compare(StringCompare stringCompare) throws Exception {
-
-            if(stringCompare.getFirst() != null && stringCompare.getSecond() != null)
-                return (stringCompare.getFirst().length() + stringCompare.getSecond().length()) > 10 ? null : stringCompare.getSecond();
+        @Override
+        public Optional<String> compare(String s1, String s2) throws RuntimeException {
+            if(s1 != null && s2 != null)
+                return (s1.length() + s2.length()) > 10 ? Optional.empty() : Optional.of(s2);
             else
-                throw new Exception("invalid input");
-
+                throw new RuntimeException("Invalid input");
         }
+    }
+
+    interface QuirkyComparator<T, U, V> {
+
+        Optional<T> compare(U u, V v) throws RuntimeException;
 
     }
 }
