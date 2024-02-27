@@ -1,4 +1,4 @@
-package org.mjkulkarni.compare.impl;
+package org.mjkulkarni.container.impl;
 
 import org.mjkulkarni.container.TwoItemContainer;
 

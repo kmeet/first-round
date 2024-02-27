@@ -1,8 +1,8 @@
 package org.mjkulkarni;
 
 import org.mjkulkarni.compare.QuirkyTwoItemContainerComparator;
-import org.mjkulkarni.compare.impl.StringCompare;
-import org.mjkulkarni.container.impl.StringUtil;
+import org.mjkulkarni.container.impl.StringCompare;
+import org.mjkulkarni.compare.impl.StringUtil;
 
 public class Main {
 

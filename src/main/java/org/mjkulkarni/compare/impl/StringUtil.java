@@ -1,4 +1,4 @@
-package org.mjkulkarni.container.impl;
+package org.mjkulkarni.compare.impl;
 
 import org.mjkulkarni.compare.QuirkyComparator;
 import org.mjkulkarni.compare.QuirkyTwoItemContainerComparator;
