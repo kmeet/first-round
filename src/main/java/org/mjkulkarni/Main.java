@@ -1,46 +1,27 @@
 package org.mjkulkarni;
 
-import java.util.Optional;
+import org.mjkulkarni.compare.QuirkyTwoItemContainerComparator;
+import org.mjkulkarni.compare.impl.StringCompare;
+import org.mjkulkarni.container.impl.StringUtil;
 
 public class Main {
+
+    /*
+     * Question:
+     * Define a class named StringCompare which has two member variables 'first' and 'second' of String type.
+     * Next, define another class named Util with one method named compare which takes two arguments, each of String type.
+     * Implement the compare method such that if the sum of the length of the two string args is greater than 10, it returns null, otherwise it returns the second string.
+     * */
     public static void main(String[] args) {
         System.out.println("Hello world!");
+        QuirkyTwoItemContainerComparator<String> comparator = new StringUtil();
+        comparator.compare(new StringCompare("test", "testing"));
+
+        Main m = new Main();
+        Test t = m. new Test();
+        t.hashCode();
     }
 
-    class StringCompare {
-        private String first, second;
+    class Test {}
 
-        public String getFirst() {
-            return first;
-        }
-
-        public void setFirst(String first) {
-            this.first = first;
-        }
-
-        public String getSecond() {
-            return second;
-        }
-
-        public void setSecond(String second) {
-            this.second = second;
-        }
-    }
-
-    class StringUtil implements QuirkyComparator<String, String, String> {
-
-        @Override
-        public Optional<String> compare(String s1, String s2) throws RuntimeException {
-            if(s1 != null && s2 != null)
-                return (s1.length() + s2.length()) > 10 ? Optional.empty() : Optional.of(s2);
-            else
-                throw new RuntimeException("Invalid input");
-        }
-    }
-
-    interface QuirkyComparator<T, U, V> {
-
-        Optional<T> compare(U u, V v) throws RuntimeException;
-
-    }
 }
