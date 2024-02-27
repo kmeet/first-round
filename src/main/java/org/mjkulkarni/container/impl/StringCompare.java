@@ -2,6 +2,11 @@ package org.mjkulkarni.container.impl;
 
 import org.mjkulkarni.container.TwoItemContainer;
 
+/**
+ * An enhanced StringCompare class from the original screening question.
+ * Name does not suit/match design, but has been left unchanged to allow
+ * for easier reference (hopefully).
+ * */
 public class StringCompare implements TwoItemContainer<String> {
     private String first, second;
 

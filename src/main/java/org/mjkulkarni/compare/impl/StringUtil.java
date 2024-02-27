@@ -6,6 +6,16 @@ import org.mjkulkarni.container.TwoItemContainer;
 
 import java.util.Optional;
 
+/**
+ * Enhanced StringUtil class from the screening round. Implements two comparator interfaces
+ * two allow for better OOP design include {@code Optional} implementation.
+ *
+ * @see org.mjkulkarni.compare.QuirkyComparator
+ * @see org.mjkulkarni.compare.QuirkyTwoItemContainerComparator
+ * @see org.mjkulkarni.container.TwoItemContainer
+ * @see org.mjkulkarni.container.impl.StringCompare
+ *
+ * */
 public class StringUtil implements QuirkyComparator<String>, QuirkyTwoItemContainerComparator<String> {
 
     /**

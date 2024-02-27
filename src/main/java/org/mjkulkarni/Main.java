@@ -16,12 +16,6 @@ public class Main {
         System.out.println("Hello world!");
         QuirkyTwoItemContainerComparator<String> comparator = new StringUtil();
         comparator.compare(new StringCompare("test", "testing"));
-
-        Main m = new Main();
-        Test t = m. new Test();
-        t.hashCode();
     }
-
-    class Test {}
 
 }
